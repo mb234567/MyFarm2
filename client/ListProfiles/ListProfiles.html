@@ -1,14 +1,15 @@
 <template name="LP"> 
   <div class="row my-3"> 
-    <!-- <div class="Main2"> -->
     {{#each profile}} 
-    <div class="cardm">
-      <img src="{{profilep}}" class="Lpic" alt="">  
-       <p class="list-card-text">My Animal Name</p> 
-       <p class="list-card-text">Species</p>
-      <i class="bi bi-binoculars js-view"></i> 
+       <div class="col-lg-4 text-center">
+          <div class="cardm m-4 p-3">
+            <img class="Lpic"  src="{{profilep}}" alt=""> 
+            <p>{{animal}}</p> 
+            <p>{{species}}</p>
+            <i class="bi bi-binoculars js-view"></i>
+          </div>
        </div>
   {{/each}} 
-<!-- </div>  -->
+
  </div> 
   </template>

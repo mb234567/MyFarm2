@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var'; 
 import '../Lib/collection.js';
-import bootstrap from 'bootstrap'; 
+import * as bootstrap from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.html'; 

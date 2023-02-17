@@ -1,23 +1,25 @@
+import * as bootstrap from 'bootstrap'
+
 Template.AP.events({ 
     'click .js-save'() { 
-      let that = this
-        let animalName = document.getElementById("name")
-        let image = document.getElementById("image")
-        let Stype = document.getElementById("species")
+      const addmodal = bootstrap.Modal.getInstance('#APModal')
+        let image = document.querySelector("#image").value
+        let animalName = document.querySelector("#name").value
+        let Stype = document.querySelector("#species").value
            myfarmdb.insert({
-           "animaln" : animalName, 
-           "species" : Stype,
-           "profilep" : image
+           "profilep" : image, 
+           "animal" : animalName,
+           "species" : Stype
         })  
-        $("#APModal").modal("hide")
+        addmodal.hide()
       }, 
       'input #image'() {
-        const image = document.getElementById("image")
-        const imgProfile = document.getElementById("PImage")
-        imgProfile.src = image.value 
+        const image = document.querySelector('#image')
+        const imgProfile = document.querySelector('#PImage')
+        imgProfile.src = image.value
       }
       
-})
+});
 
 
 

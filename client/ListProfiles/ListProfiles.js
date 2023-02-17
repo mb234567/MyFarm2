@@ -1,3 +1,5 @@
+import * as bootstrap from 'bootstrap'
+
 Template.LP.helpers({
     profile() {
         return myfarmdb.find(); 
@@ -8,10 +10,16 @@ Template.LP.helpers({
 
 Template.LP.events({
     'click .js-view'() { 
-        let that = this 
-        document.getElementById("viewname").innerHTML = `${that.animaln}` 
-        document.getElementById("viewspecies").innerHTML = `${that.species}`
-        $("#VModal").modal("show") 
+            let that = this
+            const viewModal = new bootstrap.Modal('#VModal', {})
+            document.querySelector('#viewName').innerHTML = `${that.animal}`
+            document.querySelector('#viewSpecies').innerHTML = `${that.species}`
+            viewModal.show()
+        },
+        'click .js-del'() {
+            let that = this
+            console.debug("deleting", that._id)
+            myfarmdb.remove({ "_id": that._id })
         
     }
 }) 
