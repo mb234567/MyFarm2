@@ -1,0 +1,24 @@
+<template name="VP">
+    <div class="modal modal-lg" tabindex="-1" id="VModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">View Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img id="viewProfile" src="{{profilep}}" class="VPic" alt="">
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="fs-1" id="viewName">John Wick</p>
+                            <p class="fs-3" id="viewspecies">Species</p>
+                            <i class="bi bi-file-earmark-x js-del"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
